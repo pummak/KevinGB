@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de registro</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #222e3f;
+            margin: 0;
+            padding: 90px;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #a7f2ff;
+        }
+
+        form {
+            background-color: #145052;
+            padding: 105px;
+            border-radius: 8px;
+            box-shadow: 0 0 8px rgba(255, 3, 3, 0.1);
+            max-width: 600px;
+            margin: auto;
+        }
+
+        fieldset {
+            border: none;
+            margin-bottom: 62px;
+        }
+
+        legend {
+            font-size: 25px;
+            font-weight: bold;
+            color: #d8f9ff;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #40ffc6;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        input[type="tel"],
+        input[type="password"],
+        textarea,
+        select {
+            width: 95%;
+            padding: 5px;
+            margin-bottom: 40px;
+            border: 1px solid #b7ff10;
+            border-radius: 4px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        .genero-container {
+            display: flex;
+            gap: 25px;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 50px;
+            background-color: #2cc031;
+            color: rgb(255, 255, 255);
+            border: none;
+            border-radius: 100px;
+            cursor: pointer;
+            font-size: 80px;
+        }
+
+        button:hover {
+            background-color: #ff0000;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Formulario de registro</h1>
+
+    <form action="#" method="POST" id="registro-form">
+    
+        <fieldset>
+            <legend>Información Personal</legend>
+            
+            <label for="Nombre">Nombre:</label>
+            <input type="text" id="Nombre" name="Nombre" required>
+
+            <label for="PrimerApellido">Primer apellido:</label>
+            <input type="text" id="PrimerApellido" name="PrimerApellido" required>
+
+            <label for="SegundoApellido">Segundo apellido:</label>
+            <input type="text" id="SegundoApellido" name="SegundoApellido" required>
+
+            <label for="FechaDeNacimiento">Fecha de nacimiento:</label>
+            <input type="date" id="FechaDeNacimiento" name="FechaDeNacimiento" required>
+
+            <label>Género:</label>
+            <div class="genero-container">
+                <label for="Masculino">
+                    <input type="radio" id="Masculino" name="género" value="Masculino" required>
+                    Masculino
+                </label>
+                <label for="Femenino">
+                    <input type="radio" id="Femenino" name="género" value="Femenino" required>
+                    Femenino
+                </label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Información de contacto</legend>
+
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="teléfono">Teléfono de contacto:</label>
+            <input type="tel" id="teléfono" name="teléfono" required>
+
+            <label for="dirección">Dirección:</label>
+            <textarea id="dirección" name="dirección"></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Información de la cuenta</legend>
+
+            <label for="usuario">Nombre de usuario:</label>
+            <input type="text" id="usuario" name="usuario" required>
+
+            <label for="pass">Contraseña:</label>
+            <input type="password" id="pass" name="pass" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,20}$" title="La contraseña debe contener al menos una letra minúscula, una mayúscula, un dígito, un carácter especial (@$!%*#?&) y tener entre 8 y 20 carácteres.">
+
+            <label for="confirmarpass">Confirmación de la contraseña:</label>
+            <input type="password" id="confirmarpass" name="confirmarpass" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Preferencias</legend>
+
+            <label for="color">Elige un color:</label>
+            <select id="color" name="color">
+                <option value="rojo">Rojo</option>
+                <option value="azul">Azul</option>
+                <option value="verde">Verde</option>
+                <option value="amarillo">Amarillo</option>
+            </select>
+
+            <label for="terminos">
+                <input type="checkbox" id="terminos" name="terminos" required>
+                Acepto los términos y condiciones
+            </label>
+        </fieldset>
+
+        <button type="submit">Registrar</button>
+    </form>
+
+</body>
+</html>
