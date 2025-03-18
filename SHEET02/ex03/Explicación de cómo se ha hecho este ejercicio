@@ -1,0 +1,49 @@
+Estructura básica del documento HTML:
+
+El código comienza con <!DOCTYPE html> para definir que es un documento HTML5.
+
+Las etiquetas <html> abren y cierran el documento, y se especifica el idioma con lang="es".
+
+Encabezado del documento (<head>):
+
+Dentro del <head>, se establece el conjunto de caracteres en UTF-8 para admitir caracteres especiales como tildes (<meta charset="UTF-8">).
+
+La metaetiqueta <meta name="viewport"> garantiza que la página sea responsiva (adapte su diseño a dispositivos móviles).
+
+Se define un título para la página con <title>, que aparece en la pestaña del navegador.
+
+Un bloque <style> contiene CSS interno para el estilo de la página.
+
+Estilos CSS:
+
+Se establece el tipo de fuente de toda la página con font-family: Arial, sans-serif;.
+
+Para centrar todo el contenido del cuerpo, se usa text-align: center;.
+
+La tabla tiene un ancho del 60% de la página (width: 60%;) y está centrada con margin: 0 auto;.
+
+Se usa border-collapse: collapse; para que los bordes de la tabla sean uniformes.
+
+Las celdas tienen bordes (border: 1px solid #000;), un relleno (padding: 8px;) y se alinean a la izquierda por defecto (text-align: left;).
+
+Las celdas de encabezado (<th>) tienen un fondo gris claro (background-color: #f2f2f2;) para destacarlas.
+
+Cuerpo del documento (<body>):
+
+Se agrega un encabezado principal con <h1> que muestra "Contenido del libro".
+
+Después del encabezado, se incluye la tabla con <table> para organizar el contenido.
+
+Construcción de la tabla:
+
+La tabla empieza con una fila <tr> que contiene una celda <th> que abarca tres columnas (colspan="3") cuyo texto "Capítulo" se alinea al centro con style="text-align: center;".
+
+La segunda fila define las cabeceras para el resto de las columnas: "Capítulo", "Título del capítulo" y "Páginas".
+
+Las siguientes filas se completan con datos:
+
+Se utiliza rowspan para que una celda abarque varias filas, agrupando los subtítulos de un mismo capítulo.
+
+Las celdas <td> se llenan con los títulos de los capítulos y los rangos de páginas correspondientes.
+
+Finalmente, se cierran las etiquetas <table>, <body>, y <html> en orden.

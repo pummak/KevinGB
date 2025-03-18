@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla de Contenido del Libro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        table {
+            width: 60%;
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Contenido del libro</h1>
+
+    <table>
+        <tr> 
+            <th colspan="3" style="text-align: center;">Capítulo</th> 
+        </tr>
+        <tr>
+            <th>Capítulo</th>
+            <th>Título del capítulo</th>
+            <th>Páginas</th>
+        </tr>
+        <tr>
+            <td rowspan="2">1</td>
+            <td>Introducción</td>
+            <td>1-5</td>
+        </tr>
+        <tr>
+            <td>Primeros pasos</td>
+            <td>6-12</td>
+        </tr>
+        <tr>
+            <td rowspan="3">2</td>
+            <td>Conceptos básicos</td>
+            <td>13-20</td>
+        </tr>
+        <tr>
+            <td>Avanzado</td>
+            <td>21-35</td>
+        </tr>
+        <tr>
+            <td>Ejemplos prácticos</td>
+            <td>36-45</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Conclusiones</td>
+            <td>46-50</td>
+        </tr>
+    </table>
+
+</body>
+</html>
